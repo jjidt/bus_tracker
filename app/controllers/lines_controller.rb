@@ -23,4 +23,10 @@ class LinesController < ApplicationController
     @line = Line.find(params[:id])
   end
 
+  def show
+    @line = Line.find(params[:id])
+  end
+
+
+
 end
