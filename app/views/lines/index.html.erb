@@ -6,6 +6,6 @@
 
 <ul>
   <% @lines.each do |line| %>
-    <li><a href="<%= lines_path(line) %>">line.name</a></li>
+    <li><a href="<%= lines_path(line) %>"><%= line.name %></a></li>
   <% end %>
 </ul>
