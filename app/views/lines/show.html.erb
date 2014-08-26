@@ -5,3 +5,8 @@
                 :data => {:confirm => "Are you sure?",
                           :method => "delete"},
                 :class => 'btn btn-danger' %>
+
+<h4>Stations</h4>
+<% @line.stations.each do |station| %>
+    <li><a href="<%= line_path(line) %>"><%= station.name %></a></li>
+  <% end %>
