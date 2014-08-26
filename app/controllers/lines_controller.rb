@@ -39,4 +39,12 @@ class LinesController < ApplicationController
     end
   end
 
+  def destroy
+    @line = Line.find(params[:id])
+    @line.destroy
+    flash[:notice] = "line deleted from database"
+    redirect_to(lines_path)
+  end
+
+
 end
