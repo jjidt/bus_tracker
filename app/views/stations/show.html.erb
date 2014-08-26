@@ -1,0 +1,16 @@
+<h3><%= @station.name %></h3>
+
+<%= link_to "Edit", edit_station_path(@station), :class =>'btn btn-primary' %>
+<%= link_to "DELETE", station_path(@station),
+            :data => {:confirm => "Are you sure?",
+                      :method => "Delete"},
+            :class => 'btn btn-danger' %>
+
+<h4>Lines</h4>
+
+<ul>
+  <% @station.lines.each do |line| %>
+    <li><%= link_to line.name, line_path(line) %></li>
+  <% end %>
+</ul>
+
