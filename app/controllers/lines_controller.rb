@@ -27,6 +27,16 @@ class LinesController < ApplicationController
     @line = Line.find(params[:id])
   end
 
+  def update
+    @line = Line.find(params[:id])
 
+    if @line.update(params[:line])
+      flash[:notice] = "update successful"
+      redirect_to lines_path(@line)
+    else
+      flash[:alert] = "Update Error!"
+      render 'edit'
+    end
+  end
 
 end
