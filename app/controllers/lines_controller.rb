@@ -30,7 +30,7 @@ class LinesController < ApplicationController
   def update
     @line = Line.find(params[:id])
 
-    if @line.update(params[:line])
+    if @line.update(line_params)
       flash[:notice] = "update successful"
       redirect_to line_path(@line)
     else
