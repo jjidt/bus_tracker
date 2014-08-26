@@ -5,7 +5,7 @@
 </p>
 
 <ul>
-  <% @lines.each do |line| %>
+  <% @lines.order(:name).each do |line| %>
     <li><a href="<%= line_path(line) %>"><%= line.name %></a></li>
   <% end %>
 </ul>
