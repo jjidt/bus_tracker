@@ -1,0 +1,12 @@
+
+<%= render('layouts/navbar') %>
+
+<h1>All Stations</h1>
+
+
+<ul>
+
+  <% @stations.order(:name).each %>
+
+  <% end %>
+</ul>
