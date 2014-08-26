@@ -6,7 +6,7 @@
                           :method => "delete"},
                 :class => 'btn btn-danger' %>
 
-<h4>Stations</h4>
-<% @line.stations.each do |station| %>
-    <li><a href="<%= line_path(line) %>"><%= station.name %></a></li>
+<h4>Stops</h4>
+<% @line.stops.each do |stop| %>
+    <li><a href="<%= line_path(line) %>"><%= stop.name %></a></li>
   <% end %>
