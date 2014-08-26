@@ -12,7 +12,7 @@ class LinesController < ApplicationController
     @line = Line.new(line_params)
     if @line.save
       flash[:notice] = 'successfully saved'
-      redirect_to line_path
+      redirect_to line_path(@line)
     else
       flash[:alert] = 'please fix the following errors'
       render 'lines/new.html.erb'
@@ -32,7 +32,7 @@ class LinesController < ApplicationController
 
     if @line.update(line_params)
       flash[:notice] = "update successful"
-      redirect_to line_path
+      redirect_to line_path(@line)
     else
       flash[:alert] = "Update Error!"
       render 'edit'
