@@ -1,3 +1,0 @@
-class StationController < ApplicationController
-
-end

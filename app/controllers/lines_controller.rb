@@ -19,4 +19,8 @@ class LinesController < ApplicationController
     end
   end
 
+  def edit
+    @line = Line.find(params[:id])
+  end
+
 end
